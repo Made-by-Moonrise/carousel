@@ -41,7 +41,7 @@ var commonConfiguration = {
     onDragRelease: null // Callback, triggers on drag complete.
 };
 
-var selector = "#about-carousel, #casestudy-carousel, #news-carousel, #newsmobile-carousel, #newsdetail-carousel, #press-carousel, #contact-carousel, #sitemap-carousel";
+var selector = "#yourCarouselId";
 
 function _selectItem($, configuration) {
     $(selector).touchCarousel(configuration);
@@ -214,37 +214,50 @@ function _touchCarouselModifications($, carouselHeight) {
     });
 }
 
-function _aboutModifications($, carouselHeight) {
-    // about.css | Approach / Clients (% of carouselHeight)
-    $('.approach, .clients').css({
-        'padding': (Math.round((carouselHeight / 100) * 47.108843537415).toFixed(0)) + 'px ' + '0px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
+function _baseModifications($, carouselHeight) {
+    // base.css | Headline Large (% of carouselHeight)
+    $('.headline-large').css({
+        'padding': (Math.round((carouselHeight / 100) * 47.108843537415).toFixed(0)) + 'px ' + '0px ' + '0px ' + '0px'
     });
-    $('.approach p, .clients p').css({
+    $('.headline-large h1').css({
+        'font-size': (Math.round((carouselHeight / 100) * 4.761904761905).toFixed(0)) + 'px',
+        'padding': '0px ' + (Math.round((carouselHeight / 100) * 4.251700680272).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 6.802721088435).toFixed(0)) + 'px'
+    });
+
+    // base.css | Headline Small (% of carouselHeight)
+    $('.headline-small').css({
+        'top': (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px'
+    });
+    $('.headline-small h1').css({
         'font-size': (Math.round((carouselHeight / 100) * 2.210884353741).toFixed(0)) + 'px',
-        'padding': '0px ' + '0px ' + (Math.round((carouselHeight / 100) * 1.700680272109).toFixed(0)) + 'px ' + '0px'
-    });
-    $('.competencies').css({
-        'padding': (Math.round((carouselHeight / 100) * 47.108843537415).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 10.204081632653).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
-    });
-    $('.competencies p').css({
-        'font-size': (Math.round((carouselHeight / 100) * 1.700680272109).toFixed(0)) + 'px',
-        'padding': '0px ' + '0px ' + (Math.round((carouselHeight / 100) * 0.680272108844).toFixed(0)) + 'px ' + '0px'
+        'padding': '0px ' + (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
     });
 
-    // about.css | Team (% of carouselHeight)
-    $('.team').css({
-        'width': (Math.round((carouselHeight / 100) * 40.816326530612).toFixed(0)) + 'px',
-        'padding': (Math.round((carouselHeight / 100) * 47.108843537415).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px ' + '0px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
+    // base.css | Text Block (% of carouselHeight)
+    $('.textblock').css({
+        'top': (Math.round((carouselHeight / 100) * 13.605442176871).toFixed(0)) + 'px'
     });
-    $('.team p').css({
-        'font-size': (Math.round((carouselHeight / 100) * 1.700680272109).toFixed(0)) + 'px',
-        'padding': '0px ' + '0px ' + (Math.round((carouselHeight / 100) * 0.680272108844).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
+    $('.textblock p').css({
+        'font-size': (Math.round((carouselHeight / 100) * 1.87074829932).toFixed(0)) + 'px',
+        'padding': '0px ' + '0px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
     });
 
-    // about.css | Award (% of carouselHeight)
-    $('.award dl').css({
-        'top': (Math.round((carouselHeight / 100) * 47.108843537415).toFixed(0)) + 'px',
+    // base.css | Caption Fade (% of carouselHeight)
+    $('.caption-text').css({
+        'bottom': (Math.round((carouselHeight / 100) * 5.952380952381).toFixed(0)) + 'px',
         'left': (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
+    });
+    $('.caption-text h2').css({
+        'font-size': (Math.round((carouselHeight / 100) * 2.210884353741).toFixed(0)) + 'px',
+        'padding': '0px ' + (Math.round((carouselHeight / 100) * 7.65306122449).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + '0px'
+    });
+    $('.caption-text h3').css({
+        'font-size': (Math.round((carouselHeight / 100) * 1.700680272109).toFixed(0)) + 'px',
+        'padding': (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 7.65306122449).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.340136054422).toFixed(0)) + 'px ' + '0px'
+    });
+    $('.caption-text p').css({
+        'font-size': (Math.round((carouselHeight / 100) * 2.210884353741).toFixed(0)) + 'px',
+        'padding': '0px ' + (Math.round((carouselHeight / 100) * 7.65306122449).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + '0px'
     });
 }
 
@@ -322,90 +335,6 @@ function _caseStudyModifications($, carouselHeight) {
     });
 }
 
-function _newsAndPressModifications($, carouselHeight) {
-    // newsandpress.css | Twitter (% of carouselHeight)
-    $('#twitter-tile').css({
-        'height': (carouselHeight - 140) + 'px'
-    });
-    $('#twitter').css({
-        'height': (carouselHeight - 140) + 'px'
-    });
-
-    // newsandpress.css | press (% of carouselHeight)
-    $('.press dl').css({
-        'top': (Math.round((carouselHeight / 100) * 68.027210884354).toFixed(0)) + 'px',
-        'left': (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
-    });
-}
-
-function _contactModifications($, carouselHeight) {
-    // contact.css | Contact (% of carouselHeight)
-    $('.contact-details').css({
-        'height': carouselHeight + 'px',
-    });
-    $('.contact-details h1').css({
-        'font-size': (Math.round((carouselHeight / 100) * 4.761904761905).toFixed(0)) + 'px',
-        'padding': (Math.round((carouselHeight / 100) * 45.068027210884).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 4.251700680272).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px '
-    });
-    $('.contact-details ul li').css({
-        'padding': '0px ' + '0px ' + '0px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px '
-    });
-}
-
-function _baseModifications($, carouselHeight) {
-    // base.css | Headline Large (% of carouselHeight)
-    $('.headline-large').css({
-        'padding': (Math.round((carouselHeight / 100) * 47.108843537415).toFixed(0)) + 'px ' + '0px ' + '0px ' + '0px'
-    });
-    $('.headline-large h1').css({
-        'font-size': (Math.round((carouselHeight / 100) * 4.761904761905).toFixed(0)) + 'px',
-        'padding': '0px ' + (Math.round((carouselHeight / 100) * 4.251700680272).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 6.802721088435).toFixed(0)) + 'px'
-    });
-
-    // base.css | Headline Small (% of carouselHeight)
-    $('.headline-small').css({
-        'top': (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px'
-    });
-    $('.headline-small h1').css({
-        'font-size': (Math.round((carouselHeight / 100) * 2.210884353741).toFixed(0)) + 'px',
-        'padding': '0px ' + (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
-    });
-
-    // base.css | Text Block (% of carouselHeight)
-    $('.textblock').css({
-        'top': (Math.round((carouselHeight / 100) * 13.605442176871).toFixed(0)) + 'px'
-    });
-    $('.textblock p').css({
-        'font-size': (Math.round((carouselHeight / 100) * 1.87074829932).toFixed(0)) + 'px',
-        'padding': '0px ' + '0px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
-    });
-
-    // base.css | Caption Fade (% of carouselHeight)
-    $('.caption-text').css({
-        'bottom': (Math.round((carouselHeight / 100) * 5.952380952381).toFixed(0)) + 'px',
-        'left': (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
-    });
-    $('.caption-text h2').css({
-        'font-size': (Math.round((carouselHeight / 100) * 2.210884353741).toFixed(0)) + 'px',
-        'padding': '0px ' + (Math.round((carouselHeight / 100) * 7.65306122449).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + '0px'
-    });
-    $('.caption-text h3').css({
-        'font-size': (Math.round((carouselHeight / 100) * 1.700680272109).toFixed(0)) + 'px',
-        'padding': (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 7.65306122449).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.340136054422).toFixed(0)) + 'px ' + '0px'
-    });
-    $('.caption-text p').css({
-        'font-size': (Math.round((carouselHeight / 100) * 2.210884353741).toFixed(0)) + 'px',
-        'padding': '0px ' + (Math.round((carouselHeight / 100) * 7.65306122449).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 0.850340136054).toFixed(0)) + 'px ' + '0px'
-    });
-}
-
-function _siteMapModifications($, carouselHeight) {
-    // sitemap.css | Sitemap (% of carouselHeight)
-    $('.sitemap').css({
-        'padding': (Math.round((carouselHeight / 100) * 46.598639455782).toFixed(0)) + 'px ' + '0px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
-    });
-}
-
 function _cssConfiguration($) {
     // record viewportHeight
     var viewportHeight = window.innerHeight;
@@ -417,11 +346,7 @@ function _cssConfiguration($) {
     // modify touch carousel css properties % of carouselHeight
     _touchCarouselModifications($, carouselHeight);
     _baseModifications($, carouselHeight);
-    _aboutModifications($, carouselHeight);
     _caseStudyModifications($, carouselHeight);
-    _newsAndPressModifications($, carouselHeight);
-    _contactModifications($, carouselHeight);
-    _siteMapModifications($, carouselHeight);
 
     // FOR MOBILE
     if (viewportWidth < 480) {
@@ -460,6 +385,7 @@ function _touchConfiguration($) {
 }
 
 function initializeTouchCarousel() {
+    console.log('initialize touch carousel');
     jQuery(function ($) {
         _cssConfiguration($);
         _touchConfiguration($);

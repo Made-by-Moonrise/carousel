@@ -4,8 +4,7 @@ jQuery(function ($) {
 
         var debouncedCall = _.debounce(function () {
             console.log('resize-timer');
-            //initializeTouchCarousel();
-            //initializeCaroufredsel();
+            initializeTouchCarousel();
         }, debounceRate);
 
         $(window).resize(debouncedCall);
