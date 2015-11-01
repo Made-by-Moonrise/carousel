@@ -9,8 +9,4 @@ jQuery(function ($) {
 
         $(window).resize(debouncedCall);
     });
-
-    //$("#yourCarouselId").touchCarousel({
-    //    /* carousel options go here see Javascript Options section for more info */
-    //});
 });

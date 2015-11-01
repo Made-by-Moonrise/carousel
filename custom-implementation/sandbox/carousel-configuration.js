@@ -41,6 +41,8 @@ var commonConfiguration = {
     onDragRelease: null // Callback, triggers on drag complete.
 };
 
+var carouselOffset = 85;
+
 var selector = "#yourCarouselId";
 
 function _selectItem($, configuration) {
@@ -88,16 +90,6 @@ function _mobileAdjustments($, carouselHeight) {
     });
     $('.competencies p').css({
         'font-size': (Math.round((carouselHeight / 100) * 2.2).toFixed(0)) + 'px'
-    });
-
-    // about.css | Team (% of carouselHeight)
-    $('.team').css({
-        'width': (Math.round((carouselHeight / 100) * 41.0).toFixed(0)) + 'px',
-        'padding': (Math.round((carouselHeight / 100) * 26).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 3.401360544218).toFixed(0)) + 'px ' + '0px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
-    });
-    $('.team p').css({
-        'font-size': (Math.round((carouselHeight / 100) * 2.2).toFixed(0)) + 'px',
-        'padding': '0px ' + '0px ' + (Math.round((carouselHeight / 100) * 0.680272108844).toFixed(0)) + 'px ' + (Math.round((carouselHeight / 100) * 5.102040816327).toFixed(0)) + 'px'
     });
 
     // casestudies.css | Project Description (% of carouselHeight)
@@ -343,6 +335,10 @@ function _cssConfiguration($) {
     // set carousel height varable, maximum size is 748
     var carouselHeight = viewportHeight > 1000 ? 1000 : viewportHeight;
 
+    carouselHeight = carouselHeight - carouselOffset;
+
+    console.log('carouselHeight', carouselHeight);
+
     // modify touch carousel css properties % of carouselHeight
     _touchCarouselModifications($, carouselHeight);
     _baseModifications($, carouselHeight);
@@ -363,7 +359,7 @@ function _touchConfiguration($) {
     var isTouch = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
 
     // detect narrow viewport and set snapToItems variable
-    var snap = window.innerWidth < 480 ? 'false' : 'true';
+    var snap = (window.innerWidth - carouselOffset) < 480 ? 'false' : 'true';
 
     // TOUCH BROWSERS
     if (isTouch == true) {

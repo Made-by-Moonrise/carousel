@@ -1,0 +1,101 @@
+.touchcarousel-outer-wrapper {
+    width: 100%;
+}
+
+#yourCarouselId {
+    width: 100%;
+}
+
+.project-description {
+    font-size: 13px !important;
+    line-height: 140%;
+    padding: 0 0 5px 30px;
+    color: #333333;
+}
+
+#page {
+    width: 100%;
+    max-width: 100%
+}
+
+.flexbox:not(.ie11) body {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: baseline;
+    -moz-align-items: baseline;
+    -ms-align-items: baseline;
+    align-items: baseline;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+body header#header {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+div#pageWrapper section#page {
+    padding-top: 0px;
+}
+.logo-image .logo {
+    height: 85px;
+}
+
+.logo-image #topNav nav li a {
+    padding: 20px 0;
+}
+.touchcarousel-outer-wrapper {
+    width: 100%;
+}
+
+#yourCarouselId {
+    width: 100%;
+}
+
+.project-description {
+    font-size: 13px !important;
+    line-height: 140%;
+    padding: 0 0 5px 30px;
+    color: #333333;
+}
+
+#pageWrapper {
+    padding: 0px;
+}
+
+.sqs-layout > .sqs-row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+[class*=sqs-col] .sqs-block {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.sqs-layout:not(.sqs-editing)>.sqs-row:first-child>[class*=sqs-col]:first-child>.sqs-block:last-child {
+    padding-bottom: 0px;
+}
+
+#page {
+    padding: 0px;
+}
+
+div#footerWrapper {
+    display: none;
+}
+
+#canvas:after, #header:after, #pageWrapper:after, #footer:after {
+    display: none;
+}
