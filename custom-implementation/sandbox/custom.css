@@ -57,7 +57,12 @@ div#pageWrapper section#page {
 }
 .touchcarousel-outer-wrapper {
     width: 100%;
+    background: #EDECEC;
 }
+
+/*.touchcarousel-inner-wrapper {*/
+    /*background: #FFFFFF;*/
+ /*}*/
 
 #yourCarouselId {
     width: 100%;
@@ -98,4 +103,50 @@ div#footerWrapper {
 
 #canvas:after, #header:after, #pageWrapper:after, #footer:after {
     display: none;
+}
+
+.tile-column-casestudy {
+    background: #EDECEC;
+}
+
+.touchcarousel .touchcarousel-item {
+    position: relative;
+    background: #FFFFFF;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    float: left;
+    display: block;
+}
+
+.touchcarousel .touchcarousel-item .touchcarousel-item-wrapper {
+    background: white;
+    margin-right: 8px;
+}
+
+.touchcarousel .touchcarousel-item .tile-1high-square {
+    width: 588px;
+    height: 588px;
+    overflow: hidden;
+    background-color: #f6f6f6;
+}
+
+.touchcarousel .touchcarousel-item .tile-2high-rectangle {
+    width: 410px;
+    height: 290px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    background-color: #f6f6f6;
+}
+
+.touchcarousel .progress {
+    background: url(../img/interface/progress_spinner.gif) left top;
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+}
+
+.touchcarousel-item.last .touchcarousel-item-wrapper {
+    margin-right: 0px;
 }
