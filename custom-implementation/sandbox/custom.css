@@ -2,21 +2,6 @@
     width: 100%;
 }
 
-#yourCarouselId {
-    width: 100%;
-}
-
-.project-description {
-    font-size: 13px !important;
-    line-height: 140%;
-    padding: 0 0 5px 30px;
-    color: #333333;
-}
-
-#page {
-    width: 100%;
-    max-width: 100%
-}
 
 .flexbox:not(.ie11) body {
     display: -webkit-flex;
@@ -72,7 +57,7 @@ div#pageWrapper section#page {
     font-size: 13px !important;
     line-height: 140%;
     padding: 0 0 5px 30px;
-    color: #333333;
+    color: #555;
 }
 
 #pageWrapper {
@@ -95,6 +80,8 @@ div#pageWrapper section#page {
 
 #page {
     padding: 0px;
+    width: 100%;
+    max-width: 100%;
 }
 
 div#footerWrapper {
@@ -142,7 +129,7 @@ div#footerWrapper {
 }
 
 .touchcarousel .progress {
-    background: url(../img/interface/progress_spinner.gif) left top;
+    background: url(../img/progress_spinner.gif) left top;
     background-repeat: no-repeat;
     background-position: 15px 15px;
 }
@@ -150,3 +137,75 @@ div#footerWrapper {
 .touchcarousel-item.last .touchcarousel-item-wrapper {
     margin-right: 0px;
 }
+
+.touchcarousel .arrow-holder.left {
+    left: 0;
+}
+
+.touchcarousel .arrow-holder.right {
+    right: 0;
+}
+
+.touchcarousel .arrow-icon.right {
+    right: 0;
+    background-position: -171px -4px;
+}
+
+.touchcarousel .arrow-icon.left {
+    left: 0;
+    background-position: 1px -4px;
+}
+
+.touchcarousel .arrow-holder {
+    height: 100%;
+    width: 40px;
+}
+
+.touchcarousel .arrow-holder {
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    z-index: 55;
+}
+
+.touchcarousel .arrow-icon {
+    width: 45px;
+    height: 90px;
+    top: 49.5%;
+    margin-top: -45px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.touchcarousel .arrow-icon {
+    width: 40px;
+    height: 40px;
+    margin-top: -45px;
+    background-image: url('https://ichiang-sun-j3el.squarespace.com/s/touchcarousel_nav2x.png');
+    background-size: 207px 47px;
+    background-repeat: no-repeat;
+    background-color: rgb(50, 50, 50);
+    background-color: rgba(0, 0, 0, 0.7);
+    -moz-opacity: 0.4;
+    -webkit-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.touchcarousel .arrow-holder:hover .arrow-icon {
+    background-color: rgb(30, 30, 30);
+    background-color: rgba(0, 0, 0, 0.7);
+    -moz-opacity: 0.8;
+    -webkit-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.touchcarousel .arrow-holder.disabled .arrow-icon.left {
+    background-position: -34px -4px;
+}
+
+.touchcarousel .arrow-holder.disabled .arrow-icon {
+    cursor: default;
+}
+
