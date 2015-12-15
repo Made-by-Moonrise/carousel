@@ -43,7 +43,8 @@ var commonConfiguration = {
 };
 
 var carouselOffset = 85;
-var smallFactor = 2;//2.210884353741;
+var smallFactor = 2.210884353741;
+var smallFactorProjectDescription = 1.6;
 var mediumFactor = 3.401360544218;
 var heightFactor = 18.027210884354;
 var widthFactor = 21.428571428571;
@@ -430,7 +431,7 @@ function updateProjectDescription(carouselHeight) {
         )
     });
     $('.project-description p, .clients p').css({
-        'font-size': computePixelSize(carouselHeight, smallFactor),
+        'font-size': computePixelSize(carouselHeight, smallFactorProjectDescription),
         'padding': provideBoxSpacing(
             0,
             0,
