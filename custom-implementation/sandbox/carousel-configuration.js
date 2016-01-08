@@ -431,7 +431,7 @@ function updateProjectDescription(carouselHeight) {
         )
     });
     $('.project-description p, .clients p').css({
-        'font-size': computePixelSize(carouselHeight, smallFactorProjectDescription),
+        'font-size': computePixelSize(carouselHeight, smallFactor),
         'padding': provideBoxSpacing(
             0,
             0,
