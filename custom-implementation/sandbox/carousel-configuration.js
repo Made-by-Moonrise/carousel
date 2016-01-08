@@ -180,6 +180,10 @@ function _touchCarouselModifications(carouselHeight) {
         'height': carouselHeight + 'px',
         'width': computePixelSize(carouselHeight, 141.496598639456)
     });
+    $('.tile-1high-rectangle-johnson, .tile-1high-rectangle-johnson img, .caption-1high-rectangle').css({
+        'height': carouselHeight + 'px',
+        'width': computePixelSize(carouselHeight, 133)
+    });
     $('.tile-2high-rectangle, .tile-2high-rectangle img, .caption-2high-rectangle').css({
         'height': computeSquare(carouselHeight),
         'width': computePixelSize(carouselHeight, 69.727891156463)

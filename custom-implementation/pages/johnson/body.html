@@ -11,6 +11,7 @@
           href="../../../TouchCarousel1.2.2/touchcarousel/black-and-white-skin/black-and-white-skin.css"/>
     <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="../../sandbox/custom.css"/>
+    <link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
 
     <!-- JS files -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
@@ -19,12 +20,20 @@
             src="../../../TouchCarousel1.2.2/touchcarousel/jquery.touchcarousel-1.2.js"></script>
     <script type="text/javascript" src="../../sandbox/carousel-configuration.js"></script>
     <script type="text/javascript" src="../../sandbox/initialization.js"></script>
+
+    <script src="http://vjs.zencdn.net/ie8/1.1.0/videojs-ie8.min.js"></script>
+    <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
     <!--Example only css-->
     <style type="text/css">
         .header {
             height: 85px;
             background: red;
             width: 100%;
+        }
+        .video-container > div {
+            width: auto;
+            height: 100%;
+            background-color: white;
         }
     </style>
 </head>
@@ -68,9 +77,22 @@
             </li>
             <li class="touchcarousel-item">
                 <div class="touchcarousel-item-wrapper">
-
                     <div class="tile-1high-rectangle">
                         <img src="http://static1.squarespace.com/static/54dc1306e4b021d943fcf0bd/561e5d9fe4b06f8695ad18ec/5630d5eee4b074af2d081685/1446041080399/p2.png?format=1000w"/>
+                    </div>
+                </div>
+            </li>
+            <li class="touchcarousel-item">
+                <div class="touchcarousel-item-wrapper">
+                    <div class="tile-1high-rectangle-johnson video-container">
+                        <video id="example_video_1"
+                               class="video-js vjs-default-skin"
+                               height="100%"
+                               width="auto"
+                               data-setup='{"controls": true, "autoplay": false, "preload": "auto" }'>
+                            <source src="https://s3-us-west-2.amazonaws.com/jamesonnyeholt.com/hosted/Nest+Animation+Final+trimmed.mp4" type="video/mp4">
+                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                        </video>
                     </div>
                 </div>
             </li>
@@ -87,7 +109,6 @@
             </li>
             <li class="touchcarousel-item">
                 <div class="touchcarousel-item-wrapper">
-
                     <div class="tile-1high-rectangle">
                         <img src="http://static1.squarespace.com/static/54dc1306e4b021d943fcf0bd/561e5d9fe4b06f8695ad18ec/5630d604e4b0d5f605c1c77e/1446041103741/p4.png?format=1000w"/>
                     </div>
@@ -104,5 +125,6 @@
         </ul>
     </div>
 </div>
+
 </body>
 </html>
